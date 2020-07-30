@@ -1,0 +1,21 @@
+
+{
+  "/api":{
+    "target":"http://101.132.32.129:8888",
+    "secure":false,
+    "logLevel":"debug",
+    "changeOrigin":true,
+    "pathRewrite":{
+      "^/api":"/api"
+    }
+  },
+  "/manage":{
+    "target":"http://101.132.32.129:8889",
+    "secure":false,
+    "logLevel":"debug",
+    "changeOrigin":true,
+    "pathRewrite":{
+      "^/manage":"/manage"
+    }
+  }
+}
