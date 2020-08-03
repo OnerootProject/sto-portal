@@ -1,0 +1,64 @@
+.user-project{
+    width: 100%;
+    &-contion{
+        width: 275px;
+        margin: 0 30px 25px 0;
+        header{
+            height: 80px;
+            line-height: 60px;
+            font-size: 25px;
+            background: #7d7878;
+            text-indent: 10px;
+            color: #fff;
+            border-radius: 6px 6px 0 0;
+        }
+        &-sec{
+            width: 100%;
+            padding: 0 10px;
+            background: #fff;
+            border: 2px solid #eee;
+            border-top: none;
+            padding-top: 10px;
+            &-line{
+                line-height: 25px;
+                .f-fl{
+                    color: #797373;
+                }
+            }
+            &-hr{
+                width: 100%;
+                height: 2px;
+                background: #eee;
+                margin: 14px 0 10px;
+            }
+            &-footer{
+                &-a{
+                    line-height: 24px;
+                }
+                &-b{
+                    font-size: 20px;
+                    line-height: 22px;
+                    margin-bottom: 20px;
+                    .f-fl{
+                        font-size: 16px;
+                    }
+                }
+            }
+            &-invest{
+                width: 120px;
+                height: 30px;
+                border-radius: 20px;
+                background: #1c1cf1;
+                color: #fff;
+                font-size: 12px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 10px auto 20px;
+            }
+        }
+    }
+    &-contion:nth-of-type(4n+4){
+        margin-right: 0;
+    }
+}

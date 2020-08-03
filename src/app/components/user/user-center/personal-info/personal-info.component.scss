@@ -1,0 +1,46 @@
+.user-info{
+    font-size: 16px;
+    .user-label{
+        margin-right: 10px;
+    }
+    header{
+        font-size: 30px;
+    }
+    &-title{
+        line-height: 40px;
+        
+    }
+    &-section{
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        padding: 0 20px 20px;
+        background: #eee;
+        &-header{
+            height: 50px;
+            position: relative;
+            padding-top: 15px;
+            span{
+                line-height: 50px;
+            }
+            &-btn{
+                position: absolute;
+                right: 0;
+                top: 25px;
+                line-height: 30px;
+                width: 180px;
+                border: 1px solid #000;
+                background: #fff;
+                text-align: center;
+                border-radius: 15px;
+            }
+        }
+        &-sec{
+            line-height: 32px;
+            p{
+                width: 236px;
+                display: inline-block;
+            }
+        }
+    }
+}

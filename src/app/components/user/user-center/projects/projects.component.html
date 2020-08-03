@@ -1,0 +1,27 @@
+<div class='content'>
+    <header class='qcfd user-top'>
+        <h1 class='f-fl'>My Invested projects</h1>
+        <span class='f-fr title' >The total market capitalization   10,000 USD</span>
+      </header>
+      <div class='user-project qcfd'>
+        <div class='user-project-contion f-fl'  *ngFor="let data of list">
+          <header>{{data.coin}}</header>
+          <section class='border-box user-project-contion-sec'>
+            <div class='user-project-contion-sec-line  qcfd'>
+              <span class='f-fl'>Name</span>
+              <span class='f-fr'>{{data.name}}</span>
+            </div>
+            <div class='user-project-contion-sec-line qcfd'>
+              <span class='f-fl'>Contract address</span>
+              <span class='f-fr'>{{data.address}}</span>
+            </div>
+            <div class='user-project-contion-sec-line qcfd'>
+              <span class='f-fl'>Total amount</span>
+              <span class='f-fr'>{{data.amount}}</span>
+            </div>
+            <div class='user-project-contion-sec-footer'>Holding amount</div>
+            <footer>{{data.number}}</footer>
+          </section>
+        </div>
+      </div>
+</div>

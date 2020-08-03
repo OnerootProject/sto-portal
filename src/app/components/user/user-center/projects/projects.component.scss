@@ -1,0 +1,56 @@
+.user-top{
+    line-height: 50px;
+    margin: 30px 0 10px;
+    width: 100%;
+    h1{
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .title{
+        font-size: 18px;
+    }
+}
+.user-project{
+    width: 100%;
+    &-contion{
+        width: 275px;
+        margin: 0 30px 25px 0;
+        header{
+            height: 80px;
+            line-height: 60px;
+            font-size: 25px;
+            background: #7d7878;
+            text-indent: 10px;
+            color: #fff;
+            border-radius: 6px 6px 0 0;
+        }
+        &-sec{
+            width: 100%;
+            padding: 0 10px;
+            background: #fff;
+            border: 2px solid #eee;
+            border-top: none;
+            padding-top: 10px;
+            &-line{
+                line-height: 25px;
+            }
+            &-footer{
+                line-height: 30px;
+                margin-top: 20px;
+                text-align: right;
+            }
+            footer{
+                line-height: 22px;
+                text-align: right;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &-contion:nth-of-type(4n+4){
+        margin-right: 0;
+    }
+    &-contion:nth-last-of-type(1),&-contion:nth-last-of-type(2),&-contion:nth-last-of-type(3),&-contion:nth-last-of-type(4){
+        margin-bottom: 0;
+    }
+}

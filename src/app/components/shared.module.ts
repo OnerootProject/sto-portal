@@ -11,11 +11,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 // import {FooterComponent} from './footer/footer.component';
 import {HeadComponent} from './head/head.component';
-
-
-
-
-
+import { DialogComponent } from './user/dialog/dialog.component';
+import { PersonalInfoComponent } from './user/user-center/personal-info/personal-info.component';
+import { ProjectsComponent } from './user/user-center/projects/projects.component';
+import { QuotaComponent } from './user/user-center/quota/quota.component';
+import { OfferingComponent } from './user/user-center/common/offering/offering.component';
 
 
 
@@ -28,10 +28,19 @@ import {HeadComponent} from './head/head.component';
     ],
     declarations: [
         HeadComponent,
+        DialogComponent,
+        PersonalInfoComponent,
+        ProjectsComponent,
+        QuotaComponent,
+        OfferingComponent,
     ],
     exports: [
         FormsModule,
         HeadComponent,
+        PersonalInfoComponent,
+        ProjectsComponent,
+        QuotaComponent,
+        OfferingComponent,
     ]
 })
 export class SharedModule {

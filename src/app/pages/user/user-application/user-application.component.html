@@ -1,0 +1,89 @@
+<div class='content application'>
+  <header class='application-header'>KYC application </header>
+  <section class='application-section border-box'>
+    <div class='application-section-header'>Verify your personal identity</div>
+
+    <div class='qcfd'>
+      <!-- left info -->
+      <div class='application-section-left f-fl'>
+        <div class='application-section-left-line'>
+          <p class='application-section-left-line-title'>Document type</p>
+          <nz-select class='application-section-left-line-con' nzPlaceHolder="Select a type" [(ngModel)]="singleValue" >
+              <nz-option nzLabel="护照" nzValue="1"></nz-option>
+              <nz-option nzLabel="身份证" nzValue="2"></nz-option>
+              <nz-option nzLabel="签证" nzValue="3"></nz-option>
+          </nz-select>
+        </div>
+        <div class='application-section-left-line'>
+          <p class='application-section-left-line-title'>{{'user.country' | translate}}</p>
+          <nz-select class='application-section-left-line-con' nzPlaceHolder="Select a Country" [(ngModel)]="singleValue" >
+              <nz-option nzLabel="中国" nzValue="1"></nz-option>
+              <nz-option nzLabel="韩国" nzValue="2"></nz-option>
+              <nz-option nzLabel="新加坡" nzValue="3"></nz-option>
+          </nz-select>
+        </div>
+        <div class='application-section-left-line'>
+          <p class='application-section-left-line-title'>ID card number</p>
+          <input class='application-section-left-line-con' type="text" placeholder="Lee">
+        </div>
+        <div class='application-section-left-line'>
+          <p class='application-section-left-line-title'>First name</p>
+          <input class='application-section-left-line-con' type="text" placeholder="Lee">
+        </div>
+        <div class='application-section-left-line'>
+          <p class='application-section-left-line-title'>Last name</p>
+          <input class='application-section-left-line-con' type="text" placeholder="Lee">
+        </div>
+        <div class='application-section-left-line'>
+          <p class='application-section-left-line-title'>Birth</p>
+          <input class='application-section-left-line-con' type="text" placeholder="Lee">
+        </div>
+        <div class='application-section-left-line'>
+          <p class='application-section-left-line-title'>Gender</p>
+          <input class='application-section-left-line-con' type="text" placeholder="Lee">
+        </div>
+      </div>
+
+      <!-- right card-info -->
+      <div class='application-section-right f-fr'>
+        <div class='application-section-right-line'>
+          <p class='application-section-right-line-title'>1.Upload citizen id card - front</p>
+          <div class='application-section-right-line-con qcfd'>
+            <div class='application-section-right-line-con-left f-fl'>
+              <img src="../../../../assets/images/user/carda.png" alt="">
+            </div>
+            <div class='application-section-right-line-con-right f-fr'>
+              <p class='application-section-right-line-con-right-title'>Citizen id card - positive (sample)</p>
+              <p class='application-section-right-line-con-right-car'>Upload photos</p>
+              <p class='application-section-right-line-con-right-tip'>Please upload a photo citizen id card - positive hd (support PNG, JPG, jpeg, photo size less than 2 m)</p>
+              <button class='application-section-right-line-con-right-btn f-cursor'>Choose photos</button>
+              <input type="text">
+            </div>
+          </div>
+        </div>
+
+        <div class='application-section-right-line'>
+            <p class='application-section-right-line-title'>2.Upload citizen id card - the opposite</p>
+            <div class='application-section-right-line-con qcfd'>
+              <div class='application-section-right-line-con-left f-fl'>
+                <img src="../../../../assets/images/user/cardb.png" alt="">
+              </div>
+              <div class='application-section-right-line-con-right f-fr'>
+                <p class='application-section-right-line-con-right-title'>Citizen id card - opposite (sample)</p>
+                <p class='application-section-right-line-con-right-car'>Upload photos</p>
+                <p class='application-section-right-line-con-right-tip'>Please upload a photo citizen id card - positive hd (support PNG, JPG, jpeg, photo size less than 2 m)</p>
+                <button class='application-section-right-line-con-right-btn f-cursor'>Choose photos</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class='application-section-hr'></div>
+    
+    <div class='application-section-footer'>
+      <span class='application-section-footer-cancel f-cursor'>Cancel</span>
+      <button class='application-section-footer-submit f-cursor'>Submit</button>
+    </div>
+  </section>
+</div>

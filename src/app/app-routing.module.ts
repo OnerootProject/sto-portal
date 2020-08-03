@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import {MainComponent} from './pages/main/main.component';
-import {UserComponent} from './pages/user/user.component';
+import { UserCenterComponent } from './pages/user/user-center/user-center.component';
+import { SecurityOfferingComponent } from './pages/user/security-offering/security-offering.component';
+import { UserApplicationComponent } from './pages/user/user-application/user-application.component';
+
 // import {InvestorComponent} from './pages/investor/investor.component';
 // import {PublisherComponent} from './pages/publisher/publisher.component';
 
@@ -11,15 +14,9 @@ const routes: Routes = [
     path: '',
     component: MainComponent
   },
-  {
-    path:'user',
-    component: UserComponent,
-    children: [
-      {path: '', redirectTo: 'investor', pathMatch: 'full'},
-      // {path: 'investor', component: InvestorComponent},
-      // {path: 'punlisher', component: PublisherComponent}
-    ]
-  },
+  { path: 'user-center',component: UserCenterComponent },
+  { path: 'security-offering',component: SecurityOfferingComponent },
+  { path: 'user-application',component: UserApplicationComponent },
 ];
 
 @NgModule({
