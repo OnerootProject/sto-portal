@@ -1,0 +1,29 @@
+<div class="submitList">
+    <div class="submitList_main">
+        <span class="submitList_close"><i class="fa fa-remove"></i></span>
+        <div class="submitList_t1">{{'submitList.submitListTitle' | translate}}</div>
+    
+        <div class="submitList_conent">
+            <div class="conent">
+                <div class="conent_col col1">{{'submitList.address' | translate}}</div>
+                <div class="conent_col col1">{{'submitList.amount' | translate}}</div>
+                <div class="conent_col col1">{{'submitList.sellingPeriod' | translate}}</div>
+                <div class="conent_col col1">{{'submitList.buyingPeriod' | translate}}</div>
+                <div class="conent_col col1">{{'submitList.kyc' | translate}}</div>
+            </div>
+
+            <div class="conent" *ngFor="let i of list">
+                <div class="conent_col col2">{{i.address}}</div>
+                <div class="conent_col col2">{{i.amount}}</div>
+                <div class="conent_col col2">{{i.sellPeriod}}</div>
+                <div class="conent_col col2">{{i.buyPeriod}}</div>
+                <div class="conent_col col3">{{i.kycStatus}}</div>
+            </div>
+        </div>
+    
+        <div class="submitList_t4">
+            <div>{{'addQuota.ok' | translate}}</div>
+        </div>
+    </div>
+</div>
+<div class="mask"></div>

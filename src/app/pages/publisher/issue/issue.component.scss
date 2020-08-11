@@ -1,0 +1,133 @@
+.issue{
+    .issue_list{
+        width: 100%;
+        .col_title{
+            font-weight: bolder;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+        }
+        .issue_col1{
+            display: inline-block;
+            width: 285px;
+            margin-right: 20px;
+            margin-top:10px;
+
+            .col_main1{
+                display: table;
+                border: 1px dashed #ccc;
+                border-radius: 10px;
+                height: 300px;
+                .col_mainB1{
+                    padding: 0 40px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    .make_token{
+                        cursor: pointer;
+                        color: #004ff9;
+                    }
+                }
+            }
+
+            .col_main2{
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                overflow: hidden;
+
+                .main2_nav{
+                    height: 80px;
+                    line-height: 80px;
+                    background: #666666;
+                    position: relative;
+                    span{
+                        padding-left: 15px;
+                        font-size: 20px;
+                        font-weight: bolder;
+                    }
+                    .main2_status{
+                        position: absolute;
+                        height: 30px;
+                        top: 25px;
+                        right: 0;
+                        line-height: 30px;
+                        font-size: 12px;
+                        padding: 0 15px;
+                        border-radius: 30px 0 0 30px;
+                        cursor: pointer;
+                    }
+                }
+
+                .main2_body{
+                    width: 90%;
+                    margin: 10px auto;
+                    font-size: 12px;
+                    .main2_row{
+                        padding: 5px 0;
+                        display: flex;
+                        .main2_row_left{
+                            flex: 1;
+                            color: #888;
+                        }
+                        .main2_row_right{
+                            flex: 1;
+                            text-align: right;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            font-weight: bolder;
+                        }
+                    }
+                    .main2_rFoot{
+                        border: 1px solid #f5f5f5;
+                        border-radius:  5px;
+                        background: #fcfcfc;
+                        margin: 20px 0;
+                        padding: 10px;
+                        .main2_rFoot_top{
+                            color: #888;
+                        }
+                        .main2_rFoot_foot{
+                            padding-top: 5px;
+                            font-weight: bolder;
+                        }   
+                    }
+                }
+                .main2_foot{
+                    text-align: center;
+                    font-size: 12px;
+                    .main2_foot_btn{
+                        display: inline-block;
+                        padding: 0 20px;
+                        height: 30px;
+                        line-height: 30px;
+                        border: 1px solid #efecf7;
+                        border-radius: 30px;
+                        margin: 15px 5px;
+                        cursor: pointer;
+                    }
+                    .main2_foot_btn1{
+                        display: inline-block;
+                        padding: 0 20px;
+                        height: 30px;
+                        line-height: 30px;
+                        margin: 15px 5px;
+                    }
+                }
+            }
+            
+        }
+        .issue_col1:nth-of-type(5n){
+            margin-right: 0;
+        }
+    }
+}
+
+.passed_color{
+    background: #004ff9;
+}
+.failed_color{
+    background: #e00001;
+}
+.issue_color{
+    background: #82c901;
+}

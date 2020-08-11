@@ -1,0 +1,29 @@
+    <div class='user-project qcfd'>
+      <div class='user-project-contion f-fl'  *ngFor="let data of list">
+        <header>{{data.coin}}</header>
+        <section class='border-box user-project-contion-sec'>
+          <div class='user-project-contion-sec-line  qcfd'>
+            <span class='f-fl'>Name</span>
+            <span class='f-fr'>{{data.name}}</span>
+          </div>
+          <div class='user-project-contion-sec-line qcfd'>
+            <span class='f-fl'>Contract address</span>
+            <span class='f-fr'>{{data.address}}</span>
+          </div>
+          <div class='user-project-contion-sec-line qcfd'>
+            <span class='f-fl'>Total amount</span>
+            <span class='f-fr'>{{data.amount}}</span>
+          </div>
+          <div class='user-project-contion-sec-line qcfd'>
+            <span class='f-fl'>issuer</span>
+            <span class='f-fr'>{{data.issuer}}</span>
+          </div>
+          <div class='user-project-contion-sec-hr'></div>
+          <div class='user-project-contion-sec-footer'>
+            <p class='user-project-contion-sec-footer-a qcfd'><span class='f-fl'>Total Amount</span><span class='f-fr'>Allocated quantity</span></p>
+            <p class='user-project-contion-sec-footer-b qcfd'><span class='f-fl'>{{data.million}} million</span><span class='f-fr'>{{data.number}}</span></p>
+          </div>
+          <button class='user-project-contion-sec-invest f-cursor'>Invest</button>
+        </section>
+      </div>
+    </div>

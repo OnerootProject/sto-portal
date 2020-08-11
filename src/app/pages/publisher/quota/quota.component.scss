@@ -1,0 +1,107 @@
+.quota{
+    display: flex;
+    margin-top: 20px;
+    .quota_left{
+        flex: 3;
+        .left_main{
+            text-align: center;
+            .left_back{
+                cursor: pointer;
+            }
+            .back_span{
+                margin-right: 5px;
+            }
+        }
+    }
+    .quota_right{
+        flex: 9;
+        border-left: 1px solid #efecf7;
+        padding-left: 60px;
+        .right_head_title{
+            font-size: 20px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 12px;
+            margin: 0px 0;
+        }
+        .right_main{
+            margin-top: 40px;
+            .main_title{
+                font-size: 18px;
+                font-weight: bolder;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #000;
+            }
+            .main_body_list{
+                width: 100%;
+                display: flex;
+                border-bottom: 1px solid #ccc;
+                padding: 10px 0;
+                text-align: left;
+                .body_list1{
+                    flex: 5;
+                }
+                .body_list2{
+                    flex: 3;
+                }
+                .body_list3{
+                    flex: 4;
+                }
+                .body_list4{
+                    flex: 4;
+                }
+                .body_list5{
+                    flex: 3;
+                }
+                .body_list6{
+                    flex: 2;
+                    text-align: right;
+                }
+
+                .approved{
+                    font-weight: bolder;
+                    color: #004ff9;
+                }
+                .napproved{
+                    font-weight: bolder;
+                    color: #e00001;
+                }
+
+                .add_list{
+                    font-size: 12px;
+                    color: #004ff9;
+                    border: 1px solid #efecf7;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 30px;
+                    padding: 0 20px;
+                    cursor: pointer;
+                }
+            }
+            .main_body_list_head{
+                font-size: 16px;
+                font-weight: bolder ;
+            }
+            .main_body_list_body{
+                font-size: 12px;
+                color: #888;
+            }
+        }
+        .main_foot{
+            text-align: right;
+            padding: 20px 0 60px 0;
+            .submit{
+                display: inline-block;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                padding: 0 40px;
+                cursor: pointer;
+                border: 1px solid #efecf7;
+            }
+        }
+    }
+}

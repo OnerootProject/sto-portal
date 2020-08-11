@@ -1,0 +1,20 @@
+.drak{
+    /deep/ .main-color{
+        color: #666;
+    }
+    /deep/ .btn-blue{
+        color: #666;
+        background: #82c901;
+    }
+
+}
+
+.light{
+    /deep/ .main-color{
+        color: #fff;
+    }
+    /deep/ .btn-blue{
+        color: #fff;
+        background: #004ff9;
+    }
+}

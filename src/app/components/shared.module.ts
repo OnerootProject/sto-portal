@@ -11,11 +11,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 // import {FooterComponent} from './footer/footer.component';
 import {HeadComponent} from './head/head.component';
-import { DialogComponent } from './user/dialog/dialog.component';
-import { PersonalInfoComponent } from './user/user-center/personal-info/personal-info.component';
-import { ProjectsComponent } from './user/user-center/projects/projects.component';
-import { QuotaComponent } from './user/user-center/quota/quota.component';
-import { OfferingComponent } from './user/user-center/common/offering/offering.component';
+import { DialogComponent } from './investor/dialog/dialog.component';
+import { PersonalInfoComponent } from './investor/user-center/personal-info/personal-info.component';
+import { ProjectsComponent } from './investor/user-center/projects/projects.component';
+import { QuotaComponent } from './investor/user-center/quota/quota.component';
+import { OfferingComponent } from './investor/user-center/common/offering/offering.component';
+// import { AddQuotaComponent } from './publisher/add-quota/add-quota.component';
+// import { SubmitQuotaComponent } from './publisher/submit-quota/submit-quota.component';
 
 
 
@@ -33,6 +35,8 @@ import { OfferingComponent } from './user/user-center/common/offering/offering.c
         ProjectsComponent,
         QuotaComponent,
         OfferingComponent,
+        // AddQuotaComponent,
+        // SubmitQuotaComponent,
     ],
     exports: [
         FormsModule,

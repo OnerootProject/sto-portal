@@ -1,0 +1,54 @@
+<div class="quota">
+    <div class="quota_left">
+        <div class="left_main">
+            <span class="left_back" (click)="back()">
+                <span class="back_span">‹</span>
+                Back My Sto
+            </span>
+            
+        </div>
+    </div>
+    <div class="quota_right">
+        <div class="right_head">
+            <p class="right_head_title">QUOTA</p>
+            <p>The quota allocates the ST quota to the existing shareholders or some  </p>
+            <p>investors. Add the investor account that needs the quota to the whitelist, and</p>
+            <p>only the investors who pass the KYC can be successfully written into the ST</p>
+            <p>contract whitelist.</p>
+        </div>
+        <div class="right_main">
+            <div class="main_title">
+                <div>Quota list</div>
+            </div>
+            <div class="main_body">
+                <div class="main_body_list main_body_list_head">
+                    <div class="body_list1"> Wallet Address </div>
+                    <div class="body_list2"> Amount </div>
+                    <div class="body_list3"> Selling period </div>
+                    <div class="body_list4"> Buying period </div>
+                    <div class="body_list5"> KYC status </div>
+                    <div class="body_list6"> Whitelist </div>
+                </div>
+                <div class="main_body_list main_body_list_body" *ngFor="let i of quotaList">
+                    <div class="body_list1"> {{i.addres}} </div>
+                    <div class="body_list2"> {{i.amount}} </div>
+                    <div class="body_list3"> {{i.sell}} </div>
+                    <div class="body_list4"> {{i.buy}} </div>
+                    <div class="body_list5" [ngClass]="{'approved':i.type==0, 'napproved':i.type==1}"> {{i.KYCstatus}} </div>
+                    <div class="body_list6" [ngClass]="{'approved':i.type==0, 'napproved':i.type==1}"> {{i.whitelist}} </div>
+                </div>
+                <div class="main_body_list" >
+                    <div class="add_list" (click)="addLsit()">
+                       <span>+</span>
+                       Add invedtor
+                    </div>
+                </div>
+            </div>
+            <div class="main_foot">
+                <div class="submit" (click)="submit()">
+                  Submit
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

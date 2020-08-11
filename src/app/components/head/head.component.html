@@ -1,3 +1,25 @@
-<p>
-  head works!
-</p>
+<div class="nav">
+    <div class="nav_main">
+        <div class="nav_left block">
+            <span>ZUESTO</span>
+        </div>
+        <div class="nav_center block" *ngIf="userType == 'investor'">
+            <div [ngClass]="{borderBottom: type==='userCenter'}" (click)="switch('userCenter')">
+                User Center
+            </div>
+            <div [ngClass]="{borderBottom: type==='security'}" (click)="switch('security')">
+                Security Token Offering
+            </div>
+        </div>
+        <div class="nav_right block">
+            <div class="right_body">
+                <span>0xaf...483c </span>
+                <img src="../../../assets/images/metamask.png" class="img"/>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+    
+</div>

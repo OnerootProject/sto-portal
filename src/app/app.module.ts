@@ -8,15 +8,20 @@ import {HttpClient} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
-import { HeadComponent } from './components/head/head.component';
-// import {InvestorComponent} from './pages/investor/investor.component';
-// import {PublisherComponent} from './pages/publisher/publisher.component';
+import {UserComponent} from './pages/user/user.component';
+// import { HeadComponent } from './components/head/head.component';
+
 
 //Common
 import {SharedModule} from './components/shared.module';
-import { UserCenterComponent } from './pages/user/user-center/user-center.component';
-import { SecurityOfferingComponent } from './pages/user/security-offering/security-offering.component';
-import { UserApplicationComponent } from './pages/user/user-application/user-application.component';
+
+import { IssueComponent } from './pages/publisher/issue/issue.component';
+import { QuotaComponent } from './pages/publisher/quota/quota.component';
+import { CustomComponent } from './pages/publisher/custom/custom.component';
+
+import { UserCenterComponent } from './pages/investor/user-center/user-center.component';
+import { SecurityOfferingComponent } from './pages/investor/security-offering/security-offering.component';
+import { UserApplicationComponent } from './pages/investor/user-application/user-application.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -24,6 +29,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { MakeTokenComponent } from './pages/publisher/make-token/make-token.component';
+
+import { AddQuotaComponent } from './components/publisher/add-quota/add-quota.component';
+import { SubmitQuotaComponent } from './components/publisher/submit-quota/submit-quota.component';
+
+
 
 // translate server
 export function createTranslateHttpLoader(http:HttpClient){
@@ -36,9 +47,19 @@ registerLocaleData(zh);
   declarations: [
     AppComponent,
     MainComponent,
+    UserComponent,
+    IssueComponent,
+    QuotaComponent,
+    CustomComponent,
+    
     UserCenterComponent,
     SecurityOfferingComponent,
-    UserApplicationComponent
+    UserApplicationComponent,
+    MakeTokenComponent,
+
+    AddQuotaComponent,
+    SubmitQuotaComponent
+
   ],
   imports: [
     TranslateModule.forRoot({
@@ -65,4 +86,6 @@ registerLocaleData(zh);
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

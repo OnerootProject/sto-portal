@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeadComponent implements OnInit {
 
+  type: string = 'userCenter';
+  userType: string = sessionStorage.getItem('userType');
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  switch(type: string){
+      this.type = type;
   }
 
 }
