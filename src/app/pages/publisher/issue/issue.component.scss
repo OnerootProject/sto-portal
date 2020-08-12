@@ -24,7 +24,6 @@
                     text-align: center;
                     .make_token{
                         cursor: pointer;
-                        color: #004ff9;
                     }
                 }
             }
@@ -37,7 +36,7 @@
                 .main2_nav{
                     height: 80px;
                     line-height: 80px;
-                    background: #666666;
+                    
                     position: relative;
                     span{
                         padding-left: 15px;
@@ -66,7 +65,6 @@
                         display: flex;
                         .main2_row_left{
                             flex: 1;
-                            color: #888;
                         }
                         .main2_row_right{
                             flex: 1;
@@ -80,12 +78,8 @@
                     .main2_rFoot{
                         border: 1px solid #f5f5f5;
                         border-radius:  5px;
-                        background: #fcfcfc;
                         margin: 20px 0;
                         padding: 10px;
-                        .main2_rFoot_top{
-                            color: #888;
-                        }
                         .main2_rFoot_foot{
                             padding-top: 5px;
                             font-weight: bolder;
@@ -106,11 +100,7 @@
                         cursor: pointer;
                     }
                     .main2_foot_btn1{
-                        display: inline-block;
-                        padding: 0 20px;
-                        height: 30px;
-                        line-height: 30px;
-                        margin: 15px 5px;
+                        height: 60px;
                     }
                 }
             }
@@ -122,12 +112,3 @@
     }
 }
 
-.passed_color{
-    background: #004ff9;
-}
-.failed_color{
-    background: #e00001;
-}
-.issue_color{
-    background: #82c901;
-}

@@ -4,7 +4,7 @@
         <div *ngFor="let i of list1" class="issue_col1">
             <div class="col_main1">
                 <div class="col_mainB1">
-                    <p (click)="makeToken()" class="make_token">{{i.fu_title}}</p>
+                    <p (click)="makeToken()" class="make_token font-blue">{{i.fu_title}}</p>
                     <p>{{i.body}}</p>
                 </div>
             </div>
@@ -15,29 +15,29 @@
         <div class="col_title">My STO</div>
         <div *ngFor="let i of list2" class="issue_col1">
             <div class="col_main2">
-                <div class="main2_nav">
+                <div class="main2_nav black-back font-color">
                     <span> {{i.name}} </span>
                     <div class="main2_status" [ngClass]="{'passed_color':i.type == 0, 'failed_color':i.type == 1, 'issue_color':i.type == 2}"> {{i.status}} </div>
                 </div>
                 <div class="main2_body">
                     <div class="main2_row">
-                        <span class="main2_row_left">Name</span>
+                        <span class="main2_row_left font-color2">Name</span>
                         <span class="main2_row_right">{{i.bName}}</span>
                     </div>
                     <div class="main2_row">
-                        <span class="main2_row_left">Contract address</span>
+                        <span class="main2_row_left font-color2">Contract address</span>
                         <span class="main2_row_right">{{i.address}}</span>
                     </div>
                     <div class="main2_row">
-                        <span class="main2_row_left">Issuing link</span>
+                        <span class="main2_row_left font-color2">Issuing link</span>
                         <span class="main2_row_right">{{i.link}}</span>
                     </div>
                     <div class="main2_row">
-                        <span class="main2_row_left">Issuing data</span>
+                        <span class="main2_row_left font-color2">Issuing data</span>
                         <span class="main2_row_right">{{i.data}}</span>
                     </div>
-                    <div class="main2_rFoot">
-                        <div class="main2_rFoot_top">Issuing Ethereum Account</div>
+                    <div class="main2_rFoot white-back2">
+                        <div class="font-color2">Issuing Ethereum Account</div>
                         <div class="main2_rFoot_foot">{{i.account}}</div>
                     </div>
 

@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 222;
+    z-index: 100;
 }
 .router-content{
     // width: 100%;
@@ -19,4 +19,8 @@
     width: 1200px;
     margin: 0 auto;
     
+}
+.foot{
+    text-align: center;
+    padding-bottom: 36px;
 }

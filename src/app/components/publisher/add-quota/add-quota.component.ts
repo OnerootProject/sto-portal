@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,11 +8,22 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AddQuotaComponent implements OnInit {
 
+  @Input() onDialogClose: Function;//必留参数
+  fadeFlag: string = 'fadeIn';
+
   constructor(
     public translate:TranslateService
   ) { }
 
   ngOnInit() {
+  }
+
+  close(){
+      let _this = this;
+      this.fadeFlag = 'fadeOut';
+      setTimeout(function(){
+          _this.onDialogClose();
+      },250)//小于300
   }
 
 }

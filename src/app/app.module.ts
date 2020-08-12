@@ -23,6 +23,10 @@ import { UserCenterComponent } from './pages/investor/user-center/user-center.co
 import { SecurityOfferingComponent } from './pages/investor/security-offering/security-offering.component';
 import { UserApplicationComponent } from './pages/investor/user-application/user-application.component';
 
+
+// import { PersonalInfoComponent } from './components/investor/user-center/personal-info/personal-info.component';
+// import { MetamaskComponent } from './components/metamask/metamask.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -34,6 +38,11 @@ import { MakeTokenComponent } from './pages/publisher/make-token/make-token.comp
 import { AddQuotaComponent } from './components/publisher/add-quota/add-quota.component';
 import { SubmitQuotaComponent } from './components/publisher/submit-quota/submit-quota.component';
 
+
+
+import {MetamaskComponent} from './components/metamask/metamask.component'
+import {DialogComponent} from "./components/dialog/dialog.component";
+import {SettingComponent} from './components/setting/setting.component'
 
 
 // translate server
@@ -55,10 +64,11 @@ registerLocaleData(zh);
     UserCenterComponent,
     SecurityOfferingComponent,
     UserApplicationComponent,
+
+    DialogComponent,
     MakeTokenComponent,
 
-    AddQuotaComponent,
-    SubmitQuotaComponent
+    
 
   ],
   imports: [
@@ -81,6 +91,9 @@ registerLocaleData(zh);
     HttpClientModule,
 
     NgZorroAntdModule,
+    
+  ],
+  entryComponents: [
     
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],

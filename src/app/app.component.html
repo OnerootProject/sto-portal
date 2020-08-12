@@ -5,4 +5,7 @@
 
 <!-- <div>{{'titile' | translate}}</div> -->
 <!-- <div (click)='change()'>{{'title' | translate}}  -------</div> -->
-<router-outlet></router-outlet>
+<div [ngClass]="theme">
+    <router-outlet></router-outlet>
+</div>
+

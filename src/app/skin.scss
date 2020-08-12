@@ -1,20 +1,123 @@
 .drak{
+    /deep/ .white-color{
+        color: #666;
+    }
+    input[type='checkbox']:checked, input[type='radio']:checked {
+        background : url(../assets/icon/checked.png) no-repeat center; background-size: 100% auto;
+        border: 1px solid #00CEFF;
+    }
     /deep/ .main-color{
         color: #666;
+    }
+    /deep/ .white-color2{
+        color: #888;
     }
     /deep/ .btn-blue{
         color: #666;
         background: #82c901;
     }
-
+    /deep/ .unlock-metamask-color{
+		color: #fff;
+    }
+    /deep/ .unlock-metamask-bg{
+        background: #222E5D;
+    }
+    // 设置
+    /deep/ .setUp-font1{
+        color: #AAB2C0;
+    }
+    /deep/ .setUp-color{
+        background-color: #0C2330;
+        border-color: #60698D !important;
+    }
+    /deep/ .btn{
+        background-color: #00CEFF;
+        color: #fff;
+    }
+    /deep/ .hover_bgColor{
+        border-color: #60698D !important;
+        p:hover{
+            background-color: #222E5D;
+        }
+    }
 }
 
 .light{
+    input[type='checkbox']:checked, input[type='radio']:checked {
+        background : url(../assets/icon/checked-light.png) no-repeat center; background-size: 100% auto;
+        border: 1px solid #0064FF;
+    }
     /deep/ .main-color{
         color: #fff;
     }
+    /deep/ .font-color2{
+        color: #888;
+    }
+
+    /deep/ .font-color3{
+        color: #004ff9;
+    }
+    /deep/ .font-color4{
+        color: #e00001;
+    }
+    /deep/ .font-color5{
+        color: #82c901;
+    }
+    /deep/ .font-color6{
+        color: #000000;
+    }
+
+    /deep/ .white-back{
+        background: #fff;
+    }
+    /deep/ .white-back2{
+        background: #fcfcfc;
+    }
+    /deep/ .black-back{
+        background: #666666;
+    }
+
+
     /deep/ .btn-blue{
         color: #fff;
         background: #004ff9;
     }
+    /deep/ .font-blue{
+        color: #004ff9;
+    }
+
+    /deep/ .passed_color{
+        background: #004ff9;
+    }
+    /deep/ .failed_color{
+        background: #e00001;
+    }
+    /deep/ .issue_color{
+        background: #82c901;
+    }
+
+    /deep/ .unlock-metamask-color{
+        color: #60698D;
+    }
+    /deep/ .unlock-metamask-bg{
+		background: #fff;
+    }
+        // 设置
+        /deep/ .setUp-font1{
+            color: #60698D;
+        }
+        /deep/ .setUp-color{
+            background-color: #E8E9EA;
+            border-color: #AAB2C0 !important;
+        }
+        /deep/ .btn{
+            background-color: #00CEFF;
+            color: #fff;
+        }
+        /deep/ .hover_bgColor{
+            border-color: #AAB2C0 !important;
+            p:hover{
+                background-color: #DBDDDE;
+            }
+        }
 }

@@ -3,5 +3,38 @@
     "title":"Diaoyu Island is Chinese",
     "user":{
         "country": "country"
+    },
+    "MetaMask": {
+        "ClickToInstallMetaMask": "Click to install MetaMask",
+        "ClickToUnlockMetaMask": "Click to unlock MetaMask",
+        "OperateSuccessful": "Operate succeed",
+        "OperateFailed": "Operate failed",
+        "PleaseInstall": "Please install MetaMask first",
+        "PleaseInstallOrLogin": "Please unlock/install MetaMask first",
+        "PleaseLogin": "Please unlock/install MetaMask first",
+        "Sign": "Sign",
+        "UseMetaMaskToFinish": "Please use MetaMask to finish",
+        "Install": "Please install METAMASK first",
+        "MetamaskDetails": "METAMASK is a trusted Ethereum wallet browser plugins, and  it supportsChrome, Firefox and Opera. It can manage your Ethereum wallet in the browser and communicate with Rootrex to complete the transaction.",
+        "Official": "Official website:",
+        "InstallMetaMask": "Install",
+        "Affter": "After the installation, close the browser and reopen it. Go to rootrex.com. ",
+        "ClickMetaMask": "Click the MetaMask plug-in, set the passwords, import existing wallet and start the transaction."
+    },
+    
+    "Help":{
+        "Firefox": "Install from the official plug-in store of Firefox <a href='https://addons.mozilla.org/zh-CN/firefox/addon/ether-metamask/?src=search' target='_blank'>Click here</a>",
+        "Opera": "Install from the official plug-in store of Opera <a href='https://addons.opera.com/zh-cn/extensions/details/metamask/' target='_blank'>Click here</a>"
+    },
+    "SetUp": {
+        "Setup": "Set",
+        "Currency": "Currency",
+        "Language": "Language",
+        "Theme": "Theme",
+        "Dark": "Dark",
+        "Light": "Light"
+    },
+    "Common": {
+        "Ok": "Ok"
     }
 }

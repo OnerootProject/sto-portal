@@ -1,24 +1,25 @@
-<div class="nav">
-    <div class="nav_main">
-        <div class="nav_left block">
-            <span>ZUESTO</span>
+<div class="nav white-back">
+    <div class="nav_left block">
+        <span class='f-cursor font-color3' (click)='resetHome()'>ZUESTO</span>
+    </div>
+    <div class="nav_center block" *ngIf="disHeader">
+        <div class='f-cursor' [ngClass]="{'borderBottom':type==='userCenter'}" (click)="switch('userCenter')">
+            User Center 
         </div>
-        <div class="nav_center block" *ngIf="userType == 'investor'">
-            <div [ngClass]="{borderBottom: type==='userCenter'}" (click)="switch('userCenter')">
-                User Center
-            </div>
-            <div [ngClass]="{borderBottom: type==='security'}" (click)="switch('security')">
-                Security Token Offering
-            </div>
+        <div class='f-cursor' [ngClass]="{'borderBottom':type==='security'}" (click)="switch('security')">
+            Security Token Offering
         </div>
-        <div class="nav_right block">
-            <div class="right_body">
-                <span>0xaf...483c </span>
-                <img src="../../../assets/images/metamask.png" class="img"/>
-                
-            </div>
-            
-            
+    </div>
+    <div class="nav_right block">
+        <div class="right_body font-color3">
+            <!-- 未安装 -->
+            <span class='f-cursor' *ngIf="!isInstallMetaMask" (click)="dialog()">未安装</span>
+            <!-- 登录 -->
+            <span class='f-cursor'  >
+                <span (click)="copy(metaMaskAddress)" *ngIf="this.metamask.isLogin()">{{metaMaskAddress | sensitive}}</span>
+                <span class="shezhi" (click)="setting()"><i class="fa fa-cog"></i></span>
+            </span>
+            <img src="../../../assets/images/metamask.png" class="img"/>
         </div>
     </div>
     

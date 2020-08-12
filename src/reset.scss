@@ -353,3 +353,32 @@ input::-webkit-input-placeholder {
 
 
 /************ style reset end *******************/
+input[type='checkbox'], input[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 1px solid #AAB2C0;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    margin: 0 .5rem;
+    border-radius:.2rem;
+}
+
+.drak{
+    input[type='checkbox']:checked, input[type='radio']:checked {
+        background : url(./assets/icon/checked.png) no-repeat center; background-size: 100% auto;
+        border: 1px solid #00CEFF;
+    }
+}
+.light{
+    input[type='checkbox']:checked, input[type='radio']:checked {
+        background : url(./assets/icon/checked-light.png) no-repeat center; background-size: 100% auto;
+        border: 1px solid #0064FF;
+    }
+}

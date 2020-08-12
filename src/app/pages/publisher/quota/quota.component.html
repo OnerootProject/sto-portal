@@ -1,8 +1,8 @@
 <div class="quota">
     <div class="quota_left">
         <div class="left_main">
-            <span class="left_back" (click)="back()">
-                <span class="back_span">‹</span>
+            <span class="left_back font-color3" (click)="back()">
+                <span class="back_span"><i class="fa fa-chevron-left"></i></span>
                 Back My Sto
             </span>
             
@@ -29,23 +29,23 @@
                     <div class="body_list5"> KYC status </div>
                     <div class="body_list6"> Whitelist </div>
                 </div>
-                <div class="main_body_list main_body_list_body" *ngFor="let i of quotaList">
+                <div class="main_body_list main_body_list_body font-color2" *ngFor="let i of quotaList">
                     <div class="body_list1"> {{i.addres}} </div>
                     <div class="body_list2"> {{i.amount}} </div>
                     <div class="body_list3"> {{i.sell}} </div>
                     <div class="body_list4"> {{i.buy}} </div>
-                    <div class="body_list5" [ngClass]="{'approved':i.type==0, 'napproved':i.type==1}"> {{i.KYCstatus}} </div>
-                    <div class="body_list6" [ngClass]="{'approved':i.type==0, 'napproved':i.type==1}"> {{i.whitelist}} </div>
+                    <div class="body_list5" [ngClass]="{'font-color3':i.type==0, 'font-color4':i.type==1}"> {{i.KYCstatus}} </div>
+                    <div class="body_list6" [ngClass]="{'font-color3':i.type==0, 'font-color4':i.type==1}"> {{i.whitelist}} </div>
                 </div>
                 <div class="main_body_list" >
-                    <div class="add_list" (click)="addLsit()">
+                    <div class="add_list font-color3" (click)="addLsit()">
                        <span>+</span>
                        Add invedtor
                     </div>
                 </div>
             </div>
             <div class="main_foot">
-                <div class="submit" (click)="submit()">
+                <div class="submit btn-blue" (click)="submit()">
                   Submit
                 </div>
             </div>

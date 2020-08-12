@@ -14,12 +14,15 @@ import {CustomComponent} from './pages/publisher/custom/custom.component';
 
 import { MakeTokenComponent } from './pages/publisher/make-token/make-token.component';
 
-import { AddQuotaComponent } from './components/publisher/add-quota/add-quota.component';
-import { SubmitQuotaComponent } from './components/publisher/submit-quota/submit-quota.component';
+
 
 const routes: Routes = [
   {
     path: '',
+    component: MainComponent
+  },
+  {
+    path: 'home',
     component: MainComponent
   },
   {
@@ -37,8 +40,6 @@ const routes: Routes = [
 
 
 
-      { path: 'add1',component: AddQuotaComponent },
-      { path: 'add2',component: SubmitQuotaComponent },
     ]
   },
 

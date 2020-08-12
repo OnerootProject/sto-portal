@@ -1,6 +1,6 @@
-<div class="submitList">
+<div class="submitList" [ngClass]="fadeFlag">
     <div class="submitList_main">
-        <span class="submitList_close"><i class="fa fa-remove"></i></span>
+        <span class="submitList_close" (click)="close()"><i class="fa fa-remove"></i></span>
         <div class="submitList_t1">{{'submitList.submitListTitle' | translate}}</div>
     
         <div class="submitList_conent">
@@ -22,8 +22,8 @@
         </div>
     
         <div class="submitList_t4">
-            <div>{{'addQuota.ok' | translate}}</div>
+            <div (click)="close()">{{'addQuota.ok' | translate}}</div>
         </div>
     </div>
 </div>
-<div class="mask"></div>
+<div class="mask" (click)="close()"></div>

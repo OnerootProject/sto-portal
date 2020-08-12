@@ -1,6 +1,6 @@
-<div class="addquota">
+<div class="addquota" [ngClass]="fadeFlag">
     <div class="addquota_main">
-        <span class="addquota_close"><i class="fa fa-remove"></i></span>
+        <span class="addquota_close" (click)="close()"><i class="fa fa-remove"></i></span>
         <div class="addquota_t1">{{'addQuota.addQuotaTitle' | translate}}</div>
     
         <div class="addquota_t2">{{'addQuota.address' | translate}}</div>
@@ -20,4 +20,4 @@
         </div>
     </div>
 </div>
-<div class="mask"></div>
+<div class="mask" (click)="close()"></div>

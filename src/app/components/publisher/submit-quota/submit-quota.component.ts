@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -7,6 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./submit-quota.component.scss']
 })
 export class SubmitQuotaComponent implements OnInit {
+
+  @Input() onDialogClose: Function;//必留参数
+  fadeFlag: string = 'fadeIn';
 
   list: Array<any> = [
     {
@@ -36,5 +39,13 @@ export class SubmitQuotaComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  close(){
+    let _this = this;
+    this.fadeFlag = 'fadeOut';
+    setTimeout(function(){
+        _this.onDialogClose();
+    },250)//小于300
+}
 
 }

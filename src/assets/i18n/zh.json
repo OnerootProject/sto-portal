@@ -4,6 +4,27 @@
     "user":{
         "country": "国家"
     },
+    "MetaMask": {
+        "ClickToInstallMetaMask": "点击安装MetaMask",
+        "ClickToUnlockMetaMask": "点击解锁MetaMask",
+        "OperateSuccessful": "操作成功",
+        "OperateFailed": "操作失败",
+        "PleaseInstall": "请先安装 MetaMask",
+        "PleaseInstallOrLogin": "请先 解锁/安装 MetaMask",
+        "PleaseLogin": "请先 解锁/安装 MetaMask",
+        "Sign": "签名",
+        "UseMetaMaskToFinish": "请在MetaMask中完成",
+        "Install": "请先安装METAMASK",
+        "MetamaskDetails": "METAMASK是一款基于浏览器插件形式的可信赖的以太钱包插件，支持的浏览器:Chrome、Firefox、Opera，它可以在浏览器中管理您的以太钱包并与Rootrex通信、完成交易。",
+        "Official": "官方网站：",
+        "InstallMetaMask": "安装",
+        "Affter": "安装完毕后,关闭并再次打开浏览器,进入rootrex.com",
+        "ClickMetaMask": "点击MetaMask插件,设置密码,导入钱包,开始交易"
+      },
+      "Help":{
+        "Firefox": "在 Firefox 官方插件商店安装 <a href='https://addons.mozilla.org/zh-CN/firefox/addon/ether-metamask/?src=search' target='_blank'>点击前往</a>",
+        "Opera": "在 Opera 官方插件商店安装 <a href='https://addons.opera.com/zh-cn/extensions/details/metamask/' target='_blank'>点击前往</a>"
+      },
     "makeToken" :{
         "makeToken": "Make Security Token",
         "step1": "Step 1: ST information",
@@ -57,5 +78,16 @@
         "buyingPeriod": "Buying period",
         "sellingPeriod": "Selling period",
         "kyc": "KYC status"
+    },
+    "SetUp": {
+        "Setup": "设置",
+        "Currency": "货币",
+        "Language": "语言",
+        "Theme": "主题",
+        "Dark": "深色版",
+        "Light": "浅色版"
+    },
+    "Common": {
+        "Ok": "确定"
     }
 }

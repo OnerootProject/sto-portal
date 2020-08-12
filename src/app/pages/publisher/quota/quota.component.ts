@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DialogController } from '../../../controller/dialog';
+import { AddQuotaComponent } from '../../../components/publisher/add-quota/add-quota.component';
+import { SubmitQuotaComponent } from '../../../components/publisher/submit-quota/submit-quota.component';
 
 
 @Component({
@@ -70,7 +73,8 @@ export class QuotaComponent implements OnInit {
   ]
 
   constructor(
-    private router:Router
+    private router:Router,
+    private dialogCtrl:DialogController
   ) { }
 
   ngOnInit() {
@@ -81,9 +85,11 @@ export class QuotaComponent implements OnInit {
   }
 
   addLsit(){
-    this.router.navigateByUrl('user/add1');
+    this.dialogCtrl.createFromComponent(AddQuotaComponent);
+    // this.router.navigateByUrl('user/add1');
   }
   submit(){
-    this.router.navigateByUrl('user/add2');
+    this.dialogCtrl.createFromComponent(SubmitQuotaComponent);
+    // this.router.navigateByUrl('user/add2');
   }
 }

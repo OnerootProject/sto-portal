@@ -77,3 +77,28 @@
     background: rgba(0,0,0,.5);
     z-index: 223;
 }
+.fadeIn {
+    animation: fadeIn 300ms;
+  }
+  
+  .fadeOut {
+    animation: fadeOut 300ms;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0
+    }
+    to {
+      opacity: 1
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1
+    }
+    to {
+      opacity: 0
+    }
+  }
