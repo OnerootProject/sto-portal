@@ -1,26 +1,39 @@
 <div class="maketoken">
     <div class="maketoken_title">{{'makeToken.makeToken' | translate}}</div>
     <div class="maketoken_nav">
-        <div class="nav_col" [ngClass]="{'btn-blue': step == 1}">
-            <span>{{'makeToken.step1' | translate}}</span>
-            <span class="check font-color5" *ngIf="step > 1"><i class="fa fa-check"></i> </span>
+        <div class="move passed_color"></div>
+        <div class="nav_col" [ngClass]="{'font-color': steps == 1}">
+            <span class="check_main">
+                {{'makeToken.step1' | translate}}
+                <span class="check font-color5" *ngIf="step > 1"><i class="fa fa-check"></i> </span>
+            </span>
+            
             
         </div>
-        <div class="nav_col"  [ngClass]="{'btn-blue': step == 2}">
-            <span>{{'makeToken.step2' | translate}}</span>
-            <span class="check font-color5" *ngIf="step > 2"><i class="fa fa-check"></i> </span>
+        <div class="nav_col"  [ngClass]="{'font-color': steps == 2}">
+            <span class="check_main">
+                {{'makeToken.step2' | translate}}
+                <span class="check font-color5" *ngIf="step > 2"><i class="fa fa-check"></i> </span>
+            </span>
+            
         </div>
-        <div class="nav_col"  [ngClass]="{'btn-blue': step == 3}">
-            <span>{{'makeToken.step3' | translate}}</span>
-            <span class="check font-color5" *ngIf="step > 3"><i class="fa fa-check"></i> </span>
+        <div class="nav_col"  [ngClass]="{'font-color': steps == 3}">
+            <span class="check_main">
+                {{'makeToken.step3' | translate}}
+                <span class="check font-color5" *ngIf="step > 3"><i class="fa fa-check"></i> </span>
+            </span>
+            
         </div>
-        <div class="nav_col"  [ngClass]="{'btn-blue': step == 4}">
-            <span>{{'makeToken.step4' | translate}}</span>
-            <span class="check font-color5" *ngIf="step > 4"><i class="fa fa-check"></i> </span>
+        <div class="nav_col"  [ngClass]="{'font-color': steps == 4}">
+            <span class="check_main">
+                {{'makeToken.step4' | translate}}
+                <span class="check font-color5" *ngIf="step > 4"><i class="fa fa-check"></i> </span>
+            </span>
+            
         </div>
     </div>
     <!-- 第一步 -->
-    <div class="maketoken_step step1" *ngIf="step == 1">
+    <div class="maketoken_step " *ngIf="step == 1" [ngClass]="{'step1':steps == 1}">
         <div class="maketoken_step_title" >
             <div (click)="next(0)" class="maketoken_head font-color3">
                 <span class="back"><i class="fa fa-chevron-left"></i></span>
@@ -45,7 +58,7 @@
     </div>
 
     <!-- 第二步 -->
-    <div class="maketoken_step step1" *ngIf="step == 2">
+    <div class="maketoken_step " *ngIf="step == 2" [ngClass]="{'step1':steps == 2}">
         <div class="maketoken_step_title">
             <div (click)="next(1)" class="maketoken_head font-color3">
                 <span class="back"><i class="fa fa-chevron-left"></i></span>
@@ -73,7 +86,7 @@
     </div>
 
     <!-- 第三步 -->
-    <div class="maketoken_step step1" *ngIf="step == 3">
+    <div class="maketoken_step " *ngIf="step == 3" [ngClass]="{'step1':steps == 3}">
         <div class="maketoken_step_title">
             <div (click)="next(2)" class="maketoken_head font-color3">
                 <span class="back"><i class="fa fa-chevron-left"></i></span>
@@ -96,7 +109,7 @@
     </div>
 
     <!-- 第四步 -->
-    <div class="maketoken_step step1" *ngIf="step == 4">
+    <div class="maketoken_step " *ngIf="step == 4" [ngClass]="{'step1':steps == 4}">
         <div class="maketoken_step_title">
             <div (click)="next(3)" class="maketoken_head font-color3">
                 <span class="back"><i class="fa fa-chevron-left"></i></span>

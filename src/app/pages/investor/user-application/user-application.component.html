@@ -8,19 +8,16 @@
       <div class='application-section-left f-fl'>
         <div class='application-section-left-line'>
           <p class='application-section-left-line-title'>Document type</p>
-          <nz-select class='application-section-left-line-con' nzPlaceHolder="Select a type" [(ngModel)]="singleValue" >
+          <app-select [list]='documentType'></app-select>
+          <!-- <nz-select class='application-section-left-line-con' nzPlaceHolder="Select a type" [(ngModel)]="singleValue" >
               <nz-option nzLabel="护照" nzValue="1"></nz-option>
               <nz-option nzLabel="身份证" nzValue="2"></nz-option>
               <nz-option nzLabel="签证" nzValue="3"></nz-option>
-          </nz-select>
+          </nz-select> -->
         </div>
         <div class='application-section-left-line'>
           <p class='application-section-left-line-title'>{{'user.country' | translate}}</p>
-          <nz-select class='application-section-left-line-con' nzPlaceHolder="Select a Country" [(ngModel)]="singleValue" >
-              <nz-option nzLabel="中国" nzValue="1"></nz-option>
-              <nz-option nzLabel="韩国" nzValue="2"></nz-option>
-              <nz-option nzLabel="新加坡" nzValue="3"></nz-option>
-          </nz-select>
+          <app-select [list]='countryList'></app-select>
         </div>
         <div class='application-section-left-line'>
           <p class='application-section-left-line-title'>ID card number</p>
@@ -50,14 +47,14 @@
           <p class='application-section-right-line-title'>1.Upload citizen id card - front</p>
           <div class='application-section-right-line-con qcfd'>
             <div class='application-section-right-line-con-left f-fl'>
-              <img src="../../../../assets/images/user/carda.png" alt="">
+              <img [src]="gpathA" alt="">
             </div>
             <div class='application-section-right-line-con-right f-fr'>
               <p class='application-section-right-line-con-right-title'>Citizen id card - positive (sample)</p>
               <p class='application-section-right-line-con-right-car'>Upload photos</p>
               <p class='application-section-right-line-con-right-tip'>Please upload a photo citizen id card - positive hd (support PNG, JPG, jpeg, photo size less than 2 m)</p>
-              <button class='application-section-right-line-con-right-btn f-cursor'>Choose photos</button>
-              <!-- <input type="text"> -->
+              <button class='application-section-right-line-con-right-btn f-cursor' (click)='selectPhotos(1)'>Choose photos</button>
+              <input  type="file" id='upload-photo' style="display: none" name="image" class="img" accept="image/*" (change)='add_img(1)'>
             </div>
           </div>
         </div>
@@ -66,13 +63,15 @@
             <p class='application-section-right-line-title'>2.Upload citizen id card - the opposite</p>
             <div class='application-section-right-line-con qcfd'>
               <div class='application-section-right-line-con-left f-fl'>
-                <img src="../../../../assets/images/user/cardb.png" alt="">
+              <img [src]="gpathB" alt="">
+
               </div>
               <div class='application-section-right-line-con-right f-fr'>
                 <p class='application-section-right-line-con-right-title'>Citizen id card - opposite (sample)</p>
                 <p class='application-section-right-line-con-right-car'>Upload photos</p>
                 <p class='application-section-right-line-con-right-tip'>Please upload a photo citizen id card - positive hd (support PNG, JPG, jpeg, photo size less than 2 m)</p>
-                <button class='application-section-right-line-con-right-btn f-cursor'>Choose photos</button>
+                <button class='application-section-right-line-con-right-btn f-cursor' (click)='selectPhotos(0)'>Choose photos</button>
+                <input  type="file" id='upload-photos' style="display: none" name="image" class="img" accept="image/*" (change)='add_img(0)'>
               </div>
             </div>
           </div>

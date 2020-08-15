@@ -26,6 +26,60 @@
         "Firefox": "Install from the official plug-in store of Firefox <a href='https://addons.mozilla.org/zh-CN/firefox/addon/ether-metamask/?src=search' target='_blank'>Click here</a>",
         "Opera": "Install from the official plug-in store of Opera <a href='https://addons.opera.com/zh-cn/extensions/details/metamask/' target='_blank'>Click here</a>"
     },
+    "makeToken" :{
+        "makeToken": "Make Security Token",
+        "step1": "Step 1: ST information",
+        "step2": "Step 2: Corporate Information",
+        "step3": "Step 3: Project Information",
+        "step4": "Step4: Compliance information",
+        "previous": "Previous",
+        "next": "Next step",
+        "code": "ST Code",
+        "name": "ST Name",
+        "account": "Issuer Ethereum Account",
+        "codeTip": "Please enter the ST code, no more than 10 characters",
+        "nameTip": "Please enter the ST name",
+        "accountTip": "Please enter the ST name",
+
+        "name2": "Company Name",
+        "infirmation": "Company Information",
+        "operation": "Jurisdiction of Operation",
+        "incorporation": "Jurisdiction of Incorporation",
+        "name2Tip": "Please enter the ST code, no more than 10 characters",
+        "infirmationTip": "Please enter the ST name",
+        "operationTip": "Please enter the ST name",
+        "incorporationTip": "Please enter the ST name",
+
+        "step3Tip": "The project information you fill out will be reviewed by the supervisor",
+        "information": "Project Information",
+        "link": "Project link",
+        "informationTip": "Please enter the ST name",
+        "linkTip": "Please enter the ST name",
+
+        "step4Tip": "The project information you fill out will be reviewed by the supervisor",
+        "advisory": "Advisory opinion",
+        "legal": "Legal opinion",
+        "advisoryTip": "Upload files",
+        "legalTip": "Upload files",
+        "submit": "Submit application"
+
+    },
+    "addQuota":{
+        "addQuotaTitle": "Add Investor",
+        "address": "Wallet address",
+        "amount": "Quota Amount",
+        "sellingPeriod": "Selling period",
+        "buyingPeriod": "Buying period",
+        "ok": "OK"
+    },
+    "submitList":{
+        "submitListTitle": "Submit list",
+        "address": "Wallet address",
+        "amount": "Amount",
+        "buyingPeriod": "Buying period",
+        "sellingPeriod": "Selling period",
+        "kyc": "KYC status"
+    },
     "SetUp": {
         "Setup": "Set",
         "Currency": "Currency",

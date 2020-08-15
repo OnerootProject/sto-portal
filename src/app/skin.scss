@@ -2,10 +2,6 @@
     /deep/ .white-color{
         color: #666;
     }
-    input[type='checkbox']:checked, input[type='radio']:checked {
-        background : url(../assets/icon/checked.png) no-repeat center; background-size: 100% auto;
-        border: 1px solid #00CEFF;
-    }
     /deep/ .main-color{
         color: #666;
     }
@@ -43,11 +39,10 @@
 }
 
 .light{
-    input[type='checkbox']:checked, input[type='radio']:checked {
-        background : url(../assets/icon/checked-light.png) no-repeat center; background-size: 100% auto;
-        border: 1px solid #0064FF;
-    }
     /deep/ .main-color{
+        color: #fff;
+    }
+    /deep/ .font-color{
         color: #fff;
     }
     /deep/ .font-color2{
@@ -102,22 +97,38 @@
     /deep/ .unlock-metamask-bg{
 		background: #fff;
     }
-        // 设置
-        /deep/ .setUp-font1{
-            color: #60698D;
+    // 设置
+    /deep/ .setUp-font1{
+        color: #60698D;
+    }
+    /deep/ .setUp-color{
+        background-color: #E8E9EA;
+        border-color: #AAB2C0 !important;
+    }
+    /deep/ .btn{
+        background-color: #00CEFF;
+        color: #fff;
+    }
+    /deep/ .hover_bgColor{
+        border-color: #AAB2C0 !important;
+        p:hover{
+            background-color: #DBDDDE;
         }
-        /deep/ .setUp-color{
-            background-color: #E8E9EA;
-            border-color: #AAB2C0 !important;
-        }
-        /deep/ .btn{
-            background-color: #00CEFF;
-            color: #fff;
-        }
-        /deep/ .hover_bgColor{
-            border-color: #AAB2C0 !important;
-            p:hover{
-                background-color: #DBDDDE;
-            }
-        }
+    }
+
+    /deep/ .btn-border{
+        border: 1px solid #efecf7;
+    }
+    
+    /deep/ .btn-border:hover{
+        color: #004ff9;
+        // border-color: #004ff9;
+        border:1px solid #004ff9
+    }
+
+    /deep/ .transition{
+        opacity: 0;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+    }
 }

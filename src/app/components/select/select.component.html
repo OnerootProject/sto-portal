@@ -1,0 +1,9 @@
+<div class="select-box noselect" [ngStyle]="{'line-height': height+'px','height':height+'px'}" (click)="slideDownLanguage()">
+    <span *ngIf="setLang">{{setLang}}</span>
+    <span class='placeholder' *ngIf="!setLang" [ngStyle]="{'color': placeholderColor}">{{placeholder}}</span>
+    <i class='iconfont sanjiao_xia down' *ngIf="!dis">&#xe600;</i>
+    <i class='iconfont sanjiao_xia up' *ngIf="dis">&#xe6bd;</i>
+    <div class="down-box hover_bgColor" *ngIf="dis" [ngStyle]="{'top': height+6+'px'}" >
+        <p *ngFor="let item of list" [ngStyle]="{'background': item.val == this.defaultSet ? '#fafafa': ''}" (click)="sel(item.val,event)">{{item.name}}</p>
+    </div>
+</div>

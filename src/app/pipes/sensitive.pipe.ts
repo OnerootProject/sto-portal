@@ -13,7 +13,7 @@ export class SensitivePipe implements PipeTransform {
       ** endLen 保留的后几位
       ** cha 替换的字符串
       */
-      let frontLen: number = 5, endLen: number = 5, cha: string = '*';
+      let frontLen: number = 8, endLen: number = 4, cha: string = '*';
       var len = 6;
       var xing = '';
       for (var i = 0; i < len; i++) {

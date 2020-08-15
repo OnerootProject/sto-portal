@@ -43,11 +43,14 @@ export class HeadComponent implements OnInit {
     });
     setTimeout( _ => {
       this.initMetaMask()
-    },1000)
+      this.metaMaskAddress = this.metamask.getDefaultAccount();
+    })
 
   }
   ngOnInit() {
-    this.metaMaskAddress = this.metamask.getDefaultAccount();
+    // setTimeout( _ => {
+    //   this.metaMaskAddress = this.metamask.getDefaultAccount();
+    // },1000)
   }
   initMetaMask(){
     // // debugger
@@ -66,7 +69,7 @@ export class HeadComponent implements OnInit {
   }
 
   copy(data){
-    this.skin.set('drak');
+    this.skin.set('light');
     this.skin.setLang('en');
     this.metamask.copyTextToClipboard(data);
   }

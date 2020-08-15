@@ -8,7 +8,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class SkinServiceService {
   private subject = new Subject<any>();
   private subjectLang = new Subject<any>();
-  private theme: string = 'drak';
+  private theme: string = 'light';
   private lang: string = 'en';
   constructor(private translate: TranslateService) {
 

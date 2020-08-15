@@ -74,13 +74,13 @@ export class MainComponent implements OnInit {
         }
   }
   login(address: string){
-      // this.initMetaMask(_ => {
+      this.initMetaMask(_ => {
         if(address == 'publisher'){
           this.router.navigateByUrl('user/issue');
         }else{
           this.router.navigateByUrl('user/center');
         }
-      // }); 
+      }); 
   }
 
 }

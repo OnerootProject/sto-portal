@@ -11,7 +11,7 @@ import {SkinServiceService} from './service/skin-service.service'
 export class AppComponent {
 
   title = 'eth-oneroot';
-  theme: string = 'drak';
+  theme: string = 'light';
   lang: string;
 
   constructor(

@@ -26,12 +26,12 @@ import { SubmitQuotaComponent } from './publisher/submit-quota/submit-quota.comp
 import { SensitivePipe } from '../pipes/sensitive.pipe';
 import { MetamaskComponent } from './metamask/metamask.component';
 import { SettingComponent } from './setting/setting.component';
+import { SelectComponent } from './select/select.component';
 
 // translate server
 export function createTranslateHttpLoader(http:HttpClient){
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
   }
-
 
 @NgModule({
     imports: [
@@ -54,15 +54,12 @@ export function createTranslateHttpLoader(http:HttpClient){
         ProjectsComponent,
         QuotaComponent,
         OfferingComponent,
-
         SensitivePipe,
-
         MetamaskComponent,
-        
         AddQuotaComponent,
         SubmitQuotaComponent,
-
-        SettingComponent
+        SettingComponent,
+        SelectComponent
     ],
     exports: [
         FormsModule,
@@ -72,7 +69,8 @@ export function createTranslateHttpLoader(http:HttpClient){
         QuotaComponent,
         OfferingComponent,
         SettingComponent,
-        SensitivePipe
+        SensitivePipe,
+        SelectComponent
     ],
     entryComponents: [
         MetamaskComponent,

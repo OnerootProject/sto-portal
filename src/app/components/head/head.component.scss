@@ -1,6 +1,7 @@
 .nav{
     padding: 0;
     margin: 0;
+    min-width: 1250px;
     width: 100%;
     display: flex;
     border-bottom: 1px solid #ccc;
@@ -12,9 +13,9 @@
         display: inline-block;
     }
     .nav_left{
-        flex:1;
+        flex: 1;
         span{
-            margin-left: 20px;
+            margin: 0 20px;
             font-weight: bolder;
             font-size: 18px;
         }
@@ -33,7 +34,8 @@
         }
     }
     .nav_right{
-        flex:1 ;
+        flex: 1;
+        position: relative;
         .right_body{
             position: absolute;
             right: 20px;
