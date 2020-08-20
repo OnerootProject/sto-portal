@@ -1,0 +1,161 @@
+.select-box{
+    // float: right;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    position: relative;
+    cursor: pointer;
+    // font-size: 16px;
+    .sanjiao_xia{
+        float: right;
+        color: #9c9393;
+        // margin-top: 2px;
+    }
+    .placeholder{
+        // color: #ff0;
+    }
+    .up{
+        margin-top: -2px;
+    }
+    .down-box{
+        position: absolute;
+        top: 50px;
+        left: -1px;
+        z-index: 2;
+        width: calc(100% + 2px);
+        background-color: inherit;
+        font-size: 12px;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,.15);
+        border-radius: 4px;
+        p{
+            margin: 0;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+            color: rgba(0,0,0,.65);
+            text-indent: 10px;
+            font-weight: 400;
+        }
+        p:hover{
+            background: #d3f2fd;
+        }
+    }
+}
+  .down {
+    // transform-origin: center center;
+    animation: Down 200ms linear;
+  }
+  
+  .up {
+    // transform-origin: center center;
+    animation: Up 200ms linear;
+  }
+  
+  @keyframes Down {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes Up {
+    from {
+        -webkit-transform: rotate(180deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+  }
+
+//   import { Component, OnInit, Input, ElementRef, Renderer2 } from '@angular/core';
+//   import {SelectInterface} from '../../interface/select.interface'
+//   declare var $;
+//   @Component({
+//     selector: 'app-select',
+//     templateUrl: './select.component.html',
+//     styleUrls: ['./select.component.scss']
+//   })
+//   export class SelectComponent implements OnInit {
+//     private setLang: any;
+//     private defaultSet: any;
+//     public dis: boolean = false;
+//     // 出现差错备用
+//     public copyDis: boolean = false;
+//     private height: number = 35;
+//     i: number = 0 ;
+//     j: number = 0 ;
+//     private placeholder: any = 'Select a resson';
+//     private placeholderColor: string = '#adada7';
+  
+//     // private transform: string = 'rotatex(0deg)';
+//     @Input() list: Array<SelectInterface>;
+//     constructor(
+//       private el: ElementRef,
+//       private renderer2: Renderer2
+//     ) { 
+//       document.addEventListener("click",_ => {
+//         this.dis = false;
+//     });
+//     }
+  
+//     ngOnInit() {
+//       setTimeout(_ => {
+//         console.log(this.list);
+//         this.filter();
+//       })
+  
+//     }
+//     filter(){
+//       let item = this.list;
+//       for(let i in item){
+//         if(this.defaultSet){
+//           if(item[i].val == this.defaultSet)
+//             return this.setLang = item[i].name
+//         }
+//         // else
+//         //   return this.setLang = item[i].name, this.defaultSet = item[i].val ;
+//       }
+//     }
+//     slideDownLanguage(){
+//       event.stopPropagation();
+//       let _dom = document.getElementsByClassName('april-select');
+//       let _icon:any = document.getElementsByClassName('april-up')
+//       if(_dom.length >= 1){
+//         if(!this.dis){
+//           _icon[0].style.transform = 'rotatex(180deg)';
+//           for(var k = 0 ; k < _dom.length ; k++ ){
+//             _dom[k].parentNode.removeChild(_dom[k])
+//           }
+//         }else{
+//           this.copyDis = false;
+//           this.dis = false;
+//         }
+//       }else{
+//         if(this.dis){
+//           this.copyDis = true;
+//           this.dis = false;
+//         }else{
+//           if(this.copyDis){
+//             this.dis = false;
+//             this.copyDis = false;
+//           }
+//           else
+//             this.dis = true;
+//         }
+//       }
+//     }
+//     sel(val,e,$event){
+//       this.i ++ ;
+//       event.stopPropagation();
+//       this.defaultSet = val;
+//       this.dis = !this.dis;
+//       this.filter();
+//     }
+  
+//   }
+  

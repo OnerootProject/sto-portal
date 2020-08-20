@@ -8,7 +8,7 @@
       <div class='application-section-left f-fl'>
         <div class='application-section-left-line'>
           <p class='application-section-left-line-title'>Document type</p>
-          <app-select [list]='documentType'></app-select>
+          <app-april-select [list]='documentType'></app-april-select>
           <!-- <nz-select class='application-section-left-line-con' nzPlaceHolder="Select a type" [(ngModel)]="singleValue" >
               <nz-option nzLabel="护照" nzValue="1"></nz-option>
               <nz-option nzLabel="身份证" nzValue="2"></nz-option>
@@ -17,11 +17,12 @@
         </div>
         <div class='application-section-left-line'>
           <p class='application-section-left-line-title'>{{'user.country' | translate}}</p>
-          <app-select [list]='countryList'></app-select>
+          <app-april-select [list]='countryList'></app-april-select>
         </div>
         <div class='application-section-left-line'>
           <p class='application-section-left-line-title'>ID card number</p>
-          <input class='application-section-left-line-con' type="text" placeholder="Lee">
+          <!-- <input class='application-section-left-line-con' type="text" placeholder="Lee"> -->
+          <app-april-date [changeDate]='changeDate'></app-april-date>
         </div>
         <div class='application-section-left-line'>
           <p class='application-section-left-line-title'>First name</p>
@@ -81,7 +82,7 @@
     <div class='application-section-hr'></div>
     
     <div class='application-section-footer'>
-      <span class='application-section-footer-cancel f-cursor'>Cancel</span>
+      <span class='application-section-footer-cancel f-cursor' (click)='location.back()'>Cancel</span>
       <button class='application-section-footer-submit f-cursor'>Submit</button>
     </div>
   </section>

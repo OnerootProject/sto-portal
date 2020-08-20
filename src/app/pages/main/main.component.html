@@ -2,17 +2,87 @@
     <div class="main">
         <div class="table">
             <div class="table_cell font-color">
-                <div class="table_p1 ">ZUESTO</div>
-                <div class="table_p2 ">STO integrated platform integrating distribution,</div>  
-                <div class="table_p2 ">review and transaction</div>
-                <div class="table_d">
-                    <div class="table_btn1 btn-blue" (click)="login('publisher')">
-                        I want to issue ST
-                    </div>
-                    <div class="table_btn1 btn-blue" (click)="login('investor')">
-                        I want to invest in ST
+
+                <!-- 登录：步骤1 -->
+                <div *ngIf="step == 1" data="1" class="table_step" [ngClass]="{'table_steps': steps == 1}">
+                    <div class="table_p1 ">ZUESTO</div>
+                    <div class="table_p2 ">STO integrated platform integrating distribution,</div>  
+                    <div class="table_p2 ">review and transaction</div>
+                    <div class="table_d">
+                        <div class="table_btn1 btn-blue" (click)="next(2, 'publisher')">
+                            I want to issue ST
+                        </div>
+                        <div class="table_btn1 btn-blue" (click)="next(2, 'investor')">
+                            I want to invest in ST
+                        </div>
                     </div>
                 </div>
+                <!-- 登录：步骤2 -->
+                <div *ngIf="step == 2" data="2" class="text-left table_step" [ngClass]="{'table_steps': steps == 2}">
+                    <div class="table_p1 ">ZUESTO <i class="iconfont font-weight">&#xeb94;</i> <img src="../../../assets/images/metamask.png" /> </div>
+                    <div class="table_p3 ">To Proceed, </div>
+                    <div class="table_p3 ">Connect with Metamask</div>
+                    <br />
+                    <div class="table_p2 ">With the MetaMask Wallet Signature Verification Code, you don’t need a </div>
+                    <div class="table_p2 ">username and password to log in to this URL. Clicking on MetaMask’s signature </div>
+                    <div class="table_p2 ">button <i class="fa fa-chevron-left"></i>SIGN<i class="fa fa-chevron-right"></i> will not consume any GAS fees.</div>
+                    <br />
+                    <div class="table_p2 ">Note: If MetaMask does not pop up automatically, please check if the browser</div>
+                    <div class="table_p2 ">plugin has a corresponding prompt.</div>
+                </div>
+                <!-- 登录：步骤3 -->
+                <div *ngIf="step == 3" data="3" class="text-left table_step" [ngClass]="{'table_steps': steps == 3}">
+                    <div class="table_p4 white-back font-color6">
+                        <div class="p4_main">
+                            <span class="close font-color2 f-cursor" (click)="close()"><i class="fa fa-remove"></i></span>
+                            <span class="back font-color2 f-cursor" (click)="registerSubmit(0)" *ngIf="loginPage != 0"><i class="fa fa-chevron-left"></i></span>
+                            <div class="p4_div p4_left">
+                                <div class="table_p3">{{'main.sign' | translate}}</div>
+                                <div class="table_put font-color6">
+                                        <input type="text"  placeholder="{{'main.email' | translate}}" />
+                                </div>
+                                <div class="table_put font-color6">
+                                        <input type="text"  placeholder="{{'main.user' | translate}}" />
+                                </div>
+                                <div class="table_d2 table_d3">
+                                    <div class="table_btn2 btn-blue" (click)="registerSubmit(1)" >
+                                        {{'Common.Ok' | translate}}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p4_div p4_right">
+                                <div class="table_p3">{{'main.verification' | translate}}</div>
+                                <div class="table_p5 ">{{'main.explain1' | translate}}</div>
+                                <div class="p4_enter">
+                                    <input type="text" class="p4_enter_put" />
+                                    <input type="text" class="p4_enter_put" />
+                                    <input type="text" class="p4_enter_put" />
+                                    <input type="text" class="p4_enter_put" />
+                                    <input type="text" class="p4_enter_put" />
+                                    <input type="text" class="p4_enter_put" />
+                                </div>
+                                <div class="table_d2">
+                                    <div class="table_btn2 btn-blue" (click)="login()" >
+                                        {{'Common.Ok' | translate}}
+                                    </div>
+                                </div>
+                                <div class="table_p5 p5_bottom font-color2">
+                                    {{'main.explain2' | translate}}
+                                    <span class="font-color3 f-cursor">{{'main.explain3' | translate}}</span>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                
             </div>
         </div>
         <div class="main_foot font-color"> 

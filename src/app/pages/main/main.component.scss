@@ -27,14 +27,52 @@
             display: table-cell;
             vertical-align: middle;
 
+            .table_step{
+                opacity: 0;
+                transition: all .3s;
+                -webkit-transition: all .3s;
+            }
+            .table_steps{
+                opacity: 1;
+                transition: all .3s;
+                -webkit-transition: all .3s;
+            }
+
+            .text-left{
+                display: inline-block;
+                text-align: left;
+                margin: 0 auto;
+            }
+            .font-weight{
+                font-size: 60px;
+                margin: 0 40px 0 20px;
+            }
+
             .table_p1{
-                font-size: 80px;
+                font-size: 60px;
                 padding-bottom: 10px;
                 font-weight: bolder;
+
+                img{
+                    height: 50px;
+                }
             }
             .table_p2{
                 font-size: 14px;
                 font-weight: 300;
+            }
+            .table_p3{
+                font-size: 26px;
+                font-weight: 500;
+            }
+            .table_p5{
+                font-size: 12px;
+                font-weight: 300;
+
+                
+            }
+            .p5_bottom{
+                margin-top: 10px;
             }
             .table_d{
                 padding-top: 60px;
@@ -45,6 +83,91 @@
                     margin: 0 15px;
                     cursor: pointer;
                 }
+            }
+            .table_d2{
+                padding-top: 25px;
+                text-align: center;
+                .table_btn2{
+                    display: inline-block;
+                    padding: 10px 60px;
+                    border-radius: 54px;
+                    margin: 0 15px;
+                    cursor: pointer;
+                }
+            }
+            .table_d3{
+                padding-top: 50px;
+            }
+            .table_p4{
+                display: inline-block;
+                margin: 0 auto;
+                border-radius: 5px;
+                text-align: left;
+                position: relative;
+                height:320px;
+                width: 400px;
+                overflow: hidden;
+
+                .p4_main{
+                    width: 200%;
+                    height: 100%;
+                    margin-left: 0;
+                    transition: all .3s;
+                    -webkit-transition: all .3s;
+
+                    .close{
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        padding: 0 10px;
+                        z-index: 1;
+                    }
+                    .back{
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        padding: 0 5px;
+                        z-index: 1;
+                    }
+                    .p4_div{
+                        width: 400px;
+                        height: 100%;
+                        float: left;
+                        padding: 30px 40px 20px 40px;
+                    }
+                    .p4_right{
+
+                        .p4_enter{
+                            width: 100%;
+                            padding-top: 20px;
+                            .p4_enter_put{
+                                width:47px;
+                                height: 47px;
+                                text-align: center;
+                                text-indent: 0;
+                                margin-left: 5px;
+                            }
+                            .p4_enter_put:first-child{
+                                margin-left: 0;
+                            }
+                            .p4_enter_put:nth-child(4){
+                                margin-left: 16px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .table_put{
+                width: 100%;
+                margin-top: 25px;
+
+                input[type=text]{
+                    width: 100%;
+                    padding: 10px;
+                }
+                
+
             }
         }
     }

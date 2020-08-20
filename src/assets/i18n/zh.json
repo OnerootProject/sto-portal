@@ -20,11 +20,11 @@
         "InstallMetaMask": "安装",
         "Affter": "安装完毕后,关闭并再次打开浏览器,进入rootrex.com",
         "ClickMetaMask": "点击MetaMask插件,设置密码,导入钱包,开始交易"
-      },
-      "Help":{
+    },
+    "Help":{
         "Firefox": "在 Firefox 官方插件商店安装 <a href='https://addons.mozilla.org/zh-CN/firefox/addon/ether-metamask/?src=search' target='_blank'>点击前往</a>",
         "Opera": "在 Opera 官方插件商店安装 <a href='https://addons.opera.com/zh-cn/extensions/details/metamask/' target='_blank'>点击前往</a>"
-      },
+    },
     "makeToken" :{
         "makeToken": "Make Security Token",
         "step1": "Step 1: ST information",
@@ -89,5 +89,10 @@
     },
     "Common": {
         "Ok": "确定"
+    },
+    "main":{
+        "email": "请输入邮箱",
+        "user": "请输入用户名"
     }
+    
 }

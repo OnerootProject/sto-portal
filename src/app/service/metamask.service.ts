@@ -52,7 +52,7 @@ export class MetamaskService {
   }
   //验证当前网络(是否为主网:boolean
   checkNetwork() {
-      console.log(this.web3.version.network,'是否为专用网络',this.web3)
+    //   console.log(this.web3.version.network,'是否为专用网络',this.web3)
       if (this.isLogin()) {
           return this.web3.version.network === "1";
       } else {

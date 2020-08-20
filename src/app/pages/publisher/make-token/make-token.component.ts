@@ -24,7 +24,7 @@ export class MakeTokenComponent implements OnInit {
   next(num: number){
     this.steps = -1;
       if(num == 0){
-          this.router.navigateByUrl('user/issue')
+        this.router.navigateByUrl('user/issue')
       }
       
       let move = document.getElementsByClassName('move');

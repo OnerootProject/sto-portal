@@ -17,4 +17,10 @@ export class CustomComponent implements OnInit {
   submit(){
     this.router.navigateByUrl('user/issue')
   }
+  dateChange(event){
+      console.log(event.target.value)
+  }
+  dateChange1(event){
+    console.log(event.target.value)
+}
 }

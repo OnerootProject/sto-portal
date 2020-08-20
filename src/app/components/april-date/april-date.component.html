@@ -1,0 +1,46 @@
+<div id='april-pc-data-time-s' style="width:100%" [ngStyle]="{'line-height': height+'px'}">
+    <input type="text" placeholder="输入日期" class='f-cursor' [(ngModel)]="date" readonly (click)="infocus();$event.stopPropagation();"
+    [ngStyle]="{'width':'100%','height':height+'px','left':left+'px','color':color}">
+    <i class='iconfont icon-calendar'>&#xe7d6;</i>
+    <i class='iconfont icon-quxiao' (click)='cancel()'>&#xe632;</i>
+    <div class="canlender" id="canlender" *ngIf='dis' (click)="infoc();$event.stopPropagation();" [ngStyle]="{'background':background}">
+        <div class='pc-data-time-s-g'></div>
+        <header class='qcfd'>
+            <div class='f-fl'>
+                <i (click)='yeared("pre")' class='iconfont'>&#xe603;</i>
+                <i (click)='monted("pre")' class='iconfont'>&#xe602;</i>
+
+            </div>
+            <span *ngIf='locale === "en"'>{{year}}&nbsp;&nbsp;&nbsp;&nbsp;{{month|month}} </span>
+            <span *ngIf='locale !== "en"'>{{year}} 年 {{month}} 月</span>
+            <div class='f-fr'>
+                <i (click)='monted("pro")' class='iconfont'>&#xe604;</i>
+                <i (click)='yeared("pro")' class='iconfont'>&#xe605;</i>
+            </div>
+
+        </header>
+        <table class="bgtable">
+            <thead>
+                <tr>
+                    <th *ngFor="let item of daynamearr;let index = index">{{item}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let week of wek;let i = index">
+                    <td *ngFor="let item of week;let ind = index"
+                    [ngClass]="{'gray': item.prevmonth }"
+                    (mouseenter)="over(i,ind)"
+                    (mouseleave)="leave()"
+                    (click)='setD(item.prevmonth,item.day);$event.stopPropagation();'>
+                    <ng-container *ngIf="ind < week.length">
+                      <span class='bgtable-block' 
+                      [ngClass]="{'hover': (defaultI === i && defaultInd === ind && !item.prevmonth),'acts': (year === defaultYear && month === defaultMonth && defaultDay === item.day && !item.prevmonth),'today': (toYear === year && toMonth === month && toDay === item.day && !item.prevmonth)}">
+                          {{item.day}}
+                      </span>
+                    </ng-container>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {SelectInterface} from '../../../interface/select.interface'
+import { Router , ActivatedRoute} from '@angular/router'
+import { Location } from '@angular/common'
+import {ApplicationService} from '../../../service/application.service'
 declare var $;
 
 @Component({
@@ -24,7 +27,11 @@ export class UserApplicationComponent implements OnInit {
   private gpathB: any='../../../../assets/images/user/cardb.png';
   private img: any;
   constructor(
-    public translate: TranslateService
+    public translate: TranslateService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private location: Location,
+    private applicationService: ApplicationService
   ) { }
 
   ngOnInit() {
@@ -36,23 +43,13 @@ export class UserApplicationComponent implements OnInit {
       $('#upload-photos').click();
   }
   add_img(type:number){
-    if(type == 1)
-      this.ys(event,type);
-    else
-      this.ys(event,type);
+    this.upload(event,type);
+    // this.applicationService.uploadOSS(event)
   }
-  ys(event,type){
-    let _this = this;
+  async upload(event,type){
     let eleFile = event.target.files[0];
-    let reader = new FileReader();
-      this.img = new Image();
-
-    setTimeout(_=>{
-      if(type == 1)
-        this.gpathA = reader.result;
-      else
-        this.gpathB = reader.result;
-    },500)
+    let reader = new FileReader(),
+      img:any = new Image();
 
     let file = null;
     file = event.target.files[0];
@@ -61,40 +58,19 @@ export class UserApplicationComponent implements OnInit {
     }
 
     reader.onload = function(e) {
-      _this.img.src = reader.result;
+      img.src = reader.result;
     };
 
-    let canvas = document.createElement('canvas');
-    let context = canvas.getContext('2d');
+    setTimeout(_=>{
+      if(type == 1)
+        this.gpathA = reader.result;
+      else
+        this.gpathB = reader.result;
+    },500)
+  }
 
-    _this.img.onload = function() {
-        let originWidth = _this.img.width;
-        let originHeight = _this.img.height;
-        let maxWidth = 400,
-            maxHeight = 400;
-        let targetWidth = originWidth,
-            targetHeight = originHeight;
-        if(originWidth > maxWidth || originHeight > maxHeight) {
-            if(originWidth / originHeight > maxWidth / maxHeight) {
-                targetWidth = maxWidth;
-                targetHeight = Math.round(maxWidth * (originHeight / originWidth));
-            } else {
-                targetHeight = maxHeight;
-                targetWidth = Math.round(maxHeight * (originWidth / originHeight));
-            }
-        }
-
-        canvas.width = targetWidth;
-        canvas.height = targetHeight;
-        context.clearRect(0, 0, targetWidth, targetHeight);
-        context.drawImage(_this.img, 0, 0, targetWidth, targetHeight);
-        canvas.toBlob(function(blob) {
-            let form = new FormData();
-            form.append('file', blob);
-            form.append("fileName", "123jpg")
-
-        });
-    }
+  changeDate(data){
+    console.log(data,'22222222')
   }
 
 }

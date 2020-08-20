@@ -11,7 +11,6 @@ import { MainComponent } from './pages/main/main.component';
 import {UserComponent} from './pages/user/user.component';
 // import { HeadComponent } from './components/head/head.component';
 
-
 //Common
 import {SharedModule} from './components/shared.module';
 
@@ -42,8 +41,7 @@ import { SubmitQuotaComponent } from './components/publisher/submit-quota/submit
 
 import {MetamaskComponent} from './components/metamask/metamask.component'
 import {DialogComponent} from "./components/dialog/dialog.component";
-import {SettingComponent} from './components/setting/setting.component'
-
+import {SettingComponent} from './components/setting/setting.component';
 
 // translate server
 export function createTranslateHttpLoader(http:HttpClient){
@@ -66,9 +64,7 @@ registerLocaleData(zh);
     UserApplicationComponent,
 
     DialogComponent,
-    MakeTokenComponent,
-
-    
+    MakeTokenComponent
 
   ],
   imports: [
@@ -94,7 +90,7 @@ registerLocaleData(zh);
     
   ],
   entryComponents: [
-    
+    DialogComponent
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

@@ -23,15 +23,24 @@ import { OfferingComponent } from './investor/user-center/common/offering/offeri
 import { AddQuotaComponent } from './publisher/add-quota/add-quota.component';
 import { SubmitQuotaComponent } from './publisher/submit-quota/submit-quota.component';
 
-import { SensitivePipe } from '../pipes/sensitive.pipe';
+
+// 弹窗 dialog
 import { MetamaskComponent } from './metamask/metamask.component';
 import { SettingComponent } from './setting/setting.component';
-import { SelectComponent } from './select/select.component';
+
+// 封装的组件
+import { AprilDateComponent } from './april-date/april-date.component';
+import { AprilSelectComponent } from './april-select/april-select.component'
+
+//  pipe 
+import { SensitivePipe } from '../pipes/sensitive.pipe';
+import { MonthPipe } from '../pipes/month.pipe';
+import { FormatPipe } from '../pipes/format.pipe';
 
 // translate server
 export function createTranslateHttpLoader(http:HttpClient){
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-  }
+}
 
 @NgModule({
     imports: [
@@ -55,11 +64,14 @@ export function createTranslateHttpLoader(http:HttpClient){
         QuotaComponent,
         OfferingComponent,
         SensitivePipe,
+        MonthPipe,
+        FormatPipe,
         MetamaskComponent,
         AddQuotaComponent,
         SubmitQuotaComponent,
         SettingComponent,
-        SelectComponent
+        AprilDateComponent,
+        AprilSelectComponent
     ],
     exports: [
         FormsModule,
@@ -70,7 +82,11 @@ export function createTranslateHttpLoader(http:HttpClient){
         OfferingComponent,
         SettingComponent,
         SensitivePipe,
-        SelectComponent
+        MonthPipe,
+        FormatPipe,
+        AprilDateComponent,
+        AprilSelectComponent
+
     ],
     entryComponents: [
         MetamaskComponent,

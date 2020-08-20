@@ -1,0 +1,132 @@
+#april-pc-data-time-s{
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+#april-pc-data-time-s .pc-data-time-s-g{
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    transform: rotate(45deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    position: absolute;
+    top: -5px;
+    z-index: 99;
+}
+#april-pc-data-time-s input{
+    border: 1px solid #d9d9d9;
+    height: 100%;
+    color: #606266;
+    border-radius: 5px;
+    text-indent: 35px;
+    // cursor: pointer;
+}
+#april-pc-data-time-s .icon-quxiao{
+    top: 0px;
+    position: absolute;
+    right: 6px;
+    font-size: 21px;
+    display: inline-block;
+    width: 24px;
+    color: #9c9393;
+}
+#april-pc-data-time-s .icon-calendar{
+    top: 0px;
+    position: absolute;
+    left: 6px;
+    font-size: 23px;
+    display: inline-block;
+    width: 24px;
+    color: #9c9393;
+}
+#april-pc-data-time-s input:focus{
+    outline:none;
+    border:#87C6F9 1px solid;
+    box-shadow: 0 0 8px rgba(103, 166, 217, 1);
+}
+#april-pc-data-time-s .canlender {
+    width: 260px;
+    height: auto;
+    padding: 0 15px 15px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    z-index: 99999;
+}
+#april-pc-data-time-s header{
+    width: 100%;
+    line-height: 54px;
+    font-size: 14px;
+    text-align: center;
+    color: #606266;
+    position: relative;
+}
+#april-pc-data-time-s .icon{
+    top: 4px;
+    position: absolute;
+    top: 14px;
+    font-size: 21px;
+    display: inline-block;
+    width: 24px;
+}
+#april-pc-data-time-s .down{
+    left: 0px; 
+}
+#april-pc-data-time-s .left{
+    left: 18px;
+}
+#april-pc-data-time-s .right{
+    right: 18px;
+}
+#april-pc-data-time-s .up{
+    right: 0px;
+}
+#april-pc-data-time-s table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+}
+
+#april-pc-data-time-s table.bgtable thead tr th {
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+#april-pc-data-time-s table.bgtable tbody tr td {
+    line-height: 37px;
+    box-sizing: border-box;
+    /* border: 1px solid #ccc; */
+    text-align: right;
+    vertical-align: top;
+    text-align: center;
+    /* background: #eee; */
+    /* padding: 4px; */
+}
+#april-pc-data-time-s table.bgtable tbody tr td .bgtable-block{
+    width: 30px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    /* background: #fff */
+}
+#april-pc-data-time-s table.bgtable tbody tr td.gray{
+    color: #c0c4cc;
+    /* background: #DDDDDD; */
+}
+#april-pc-data-time-s table.bgtable tbody tr td .today{
+    color: #409eff
+}
+#april-pc-data-time-s table.bgtable tbody tr td .hover{
+    color: #409eff
+}
+#april-pc-data-time-s table.bgtable tbody tr td .acts{
+    color: #fff;
+    background-color: #409eff;
+    border-radius: 50%;
+}

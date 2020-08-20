@@ -2,7 +2,9 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 import {MetamaskService} from '../../service/metamask.service'
 import {DialogController} from '../../controller/dialog'
-import {MetamaskComponent} from '../../components/metamask/metamask.component'
+import {MetamaskComponent} from '../../components/metamask/metamask.component';
+
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -14,11 +16,23 @@ export class MainComponent implements OnInit {
   isInstallMetaMask: boolean = true;
   metaMaskAddress: string;
   metaMaskNetwork: boolean;
+  address: string = 'publisher';
+
+  page: number = 0;
+  loginPage: number = 0;
+
+  step: number = 1;
+  steps: number = 1;
+
+  setTimeout1:any;
+  setTimeout2:any;
+
   constructor(
     private router: Router,
     private metamask: MetamaskService,
     private dialogCtrl: DialogController,
-    private viewContainerRef: ViewContainerRef
+    private viewContainerRef: ViewContainerRef,
+    public translate: TranslateService,
   ) { 
     this.dialogCtrl.setViewContainerRef(this.viewContainerRef)
   }
@@ -27,7 +41,7 @@ export class MainComponent implements OnInit {
     this.init()
   }
   init(){
-
+    
   }
   initMetaMask(callback){
     this.isInstallMetaMask = this.metamask.checkInstall();
@@ -73,14 +87,62 @@ export class MainComponent implements OnInit {
           this.dialogCtrl.create(option)
         }
   }
-  login(address: string){
+  next(num: number, address: string){
+    console.log(num +'-'+ address)
+    this.address = address;
+    this.steps = -1;
+    console.log('a')
+    this.setTimeout1 = setTimeout(()=>{
+      console.log(111)
+      this.step = num;
+      console.log(this.step)
+    },300);
+    this.setTimeout2 = setTimeout(()=>{
+      console.log(222)
+      this.steps = num;
+      console.log(this.steps)
+    },310);
+
+
+
+    if(num == 2){
       this.initMetaMask(_ => {
-        if(address == 'publisher'){
-          this.router.navigateByUrl('user/issue');
-        }else{
-          this.router.navigateByUrl('user/center');
-        }
-      }); 
+        // setTimeout(()=>{
+          this.next(3, this.address);
+        // },2000)
+        
+      })
+    }
+
+
+    
+    
+  } 
+  login(){
+    // let address = this.address;
+      
+    if(this.address == 'publisher'){
+      this.router.navigateByUrl('user/issue');
+    }else{
+      this.router.navigateByUrl('user/center');
+    }
+  }
+  close(){
+    // this.step = 1;
+    // this.steps = 1;
+    this.next(1, this.address)
+  }
+  registerSubmit(num: number){
+    let p4_main:any = document.getElementsByClassName('p4_main');
+    if(p4_main){
+      this.loginPage = num;
+      let n = num * -400;
+      p4_main[0].style.marginLeft = n + 'px';
+    }
+  }
+  codeSubmit(){
+    
+    
   }
 
 }

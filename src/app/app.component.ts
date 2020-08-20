@@ -20,6 +20,7 @@ export class AppComponent {
     private dialogCtrl: DialogController,
     private skin: SkinServiceService
   ){
+
     console.log(viewContainerRef,"111")
     // this.dialogCtrl.setViewContainerRef(this.viewContainerRef)
     //添加语言支持

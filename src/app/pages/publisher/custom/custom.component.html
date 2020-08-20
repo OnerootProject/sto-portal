@@ -7,8 +7,14 @@
             <div class="custom_row">
                 <div class="custom_row_head">Starting time</div>
                 <div class="custom_row_main">
-                    <input type="date" class="custom_row_put custom_row_put1" />
-                    <input type="time" class="custom_row_put custom_row_put2" />
+                    <!-- <input type="date" class="custom_row_put custom_row_put1" />
+                    <input type="time" class="custom_row_put custom_row_put2" /> -->
+                    <div class="custom_row_datetime">
+                        <input type="date" class=" custom_row_put3" (change)="dateChange($event)" />
+                    </div>
+                    <div class="custom_row_datetime">
+                        <input type="time" class=" custom_row_put4" (change)="dateChange1($event)" />
+                    </div>
                 </div>
             </div>
             <div class="custom_row">
@@ -31,8 +37,12 @@
             <div class="custom_row">
                 <div class="custom_row_head">End time</div>
                 <div class="custom_row_main">
-                    <input type="date" class="custom_row_put custom_row_put1" />
-                    <input type="time" class="custom_row_put custom_row_put2" />
+                    <div class="custom_row_datetime">
+                        <input type="date" class=" custom_row_put3" (change)="dateChange($event)" />
+                    </div>
+                    <div class="custom_row_datetime">
+                        <input type="time" class=" custom_row_put4" (change)="dateChange1($event)" />
+                    </div>
                 </div>
             </div>
             <div class="custom_row">

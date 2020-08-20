@@ -1,11 +1,11 @@
 @charset "utf-8";
 @font-face {
     font-family: 'iconfont';  /* project id 940078 */
-    src: url('//at.alicdn.com/t/font_940078_5uv1h7ike3q.eot');
-    src: url('//at.alicdn.com/t/font_940078_5uv1h7ike3q.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_940078_5uv1h7ike3q.woff') format('woff'),
-    url('//at.alicdn.com/t/font_940078_5uv1h7ike3q.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_940078_5uv1h7ike3q.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_940078_6rgea7r73kt.eot');
+    src: url('//at.alicdn.com/t/font_940078_6rgea7r73kt.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_940078_6rgea7r73kt.woff') format('woff'),
+    url('//at.alicdn.com/t/font_940078_6rgea7r73kt.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_940078_6rgea7r73kt.svg#iconfont') format('svg');
   }
 /*=========================Reset_start==========================*/
 .iconfont{
@@ -181,12 +181,20 @@ button {
 // ******input边框样式*******/
 .bor {
     border: 1px solid #d9d9d9;
+    // border:#87C6F9 1px solid;
+    // box-shadow: 0 0 12px rgba(103, 166, 217, 1);
 }
 
 .bor:focus {
     outline: none;
-    border: #87C6F9 1px solid;
-    box-shadow: 0 0 8px rgba(103, 166, 217, 1);
+    border:#87C6F9 1px solid;
+    box-shadow: 0 0 12px #2799f5;
+}
+
+div:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
 
 input {

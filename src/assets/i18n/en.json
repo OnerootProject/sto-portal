@@ -90,5 +90,15 @@
     },
     "Common": {
         "Ok": "Ok"
+    },
+    "main":{
+        "sign": "SIGN UP",
+        "email": "email",
+        "user": "Username",
+
+        "verification": "Verification code",
+        "explain1": "We have sent a verification code to the email address you entered.Please enter the verification code to complete the registration.",
+        "explain2": "The verification code will expire within 24 hours. If you do not receive the verification code, please click",
+        "explain3": "Resend"
     }
 }
